@@ -1,0 +1,62 @@
+--------------TEST PHASE 1---------------
+Running phase 1 on a 2048x2048 image...
+Sequential version: 0.059065 sec, Parallel version: 0.003788 sec
+
+Running phase 1 on a 2048x4096 image...
+Sequential version: 0.361473 sec, Parallel version: 0.005826 sec
+
+Running phase 1 on a 4096x4096 image...
+Sequential version: 1.667399 sec, Parallel version: 0.011258 sec
+
+SUMMARY:
+[PHASE 1][2048x2048] Speedup: 15.592627
+[PHASE 1][2048x4096] Speedup: 62.041444
+[PHASE 1][4096x4096] Speedup: 148.105091
+sh-5.1$ ./test -p 2
+Use CTRL-C to exit if necessary.
+Make sure to take care of possible data races!
+
+--------------TEST PHASE 2---------------
+Running phase 2 on a 2048x2048 image...
+Sequential version: 0.215179 sec, Parallel version: 0.006406 sec
+
+Running phase 2 on a 2048x4096 image...
+Sequential version: 0.492072 sec, Parallel version: 0.009671 sec
+
+Running phase 2 on a 4096x4096 image...
+Sequential version: 0.913650 sec, Parallel version: 0.017306 sec
+
+SUMMARY:
+[PHASE 2][2048x2048] Speedup: 33.591647
+[PHASE 2][2048x4096] Speedup: 50.881435
+[PHASE 2][4096x4096] Speedup: 52.793391
+sh-5.1$ ./test -p 3
+Use CTRL-C to exit if necessary.
+Make sure to take care of possible data races!
+
+--------------TEST PHASE 3---------------
+Running phase 3 on a 2048x2048 image with a 3x3 kernel...
+Sequential version: 0.441842 sec, Parallel version: 0.024701 sec
+
+Running phase 3 on a 2048x2048 image with a 5x5 kernel...
+Sequential version: 0.809149 sec, Parallel version: 0.038478 sec
+
+Running phase 3 on a 2048x4096 image with a 3x3 kernel...
+Sequential version: 1.168118 sec, Parallel version: 0.035928 sec
+
+Running phase 3 on a 2048x4096 image with a 5x5 kernel...
+Sequential version: 1.799846 sec, Parallel version: 0.070260 sec
+
+Running phase 3 on a 4096x4096 image with a 3x3 kernel...
+Sequential version: 2.490671 sec, Parallel version: 0.072217 sec
+
+Running phase 3 on a 4096x4096 image with a 5x5 kernel...
+Sequential version: 3.936499 sec, Parallel version: 0.150431 sec
+
+SUMMARY:
+[PHASE 3][2048x2048][3x3 KERNEL] Speedup: 17.887813
+[PHASE 3][2048x2048][5x5 KERNEL] Speedup: 21.028697
+[PHASE 3][2048x4096][3x3 KERNEL] Speedup: 32.513168
+[PHASE 3][2048x4096][5x5 KERNEL] Speedup: 25.617122
+[PHASE 3][4096x4096][3x3 KERNEL] Speedup: 34.488480
+[PHASE 3][4096x4096][5x5 KERNEL] Speedup: 26.168053
